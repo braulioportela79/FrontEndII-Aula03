@@ -7,7 +7,6 @@ import dividir from './dividir.js'
 let num1 = parseInt(prompt('Digite um número:'));
 let num2 = parseInt(prompt('Digite um número:'));
 
-// 2. Executar a função que permite adicionar e a função que permite subtrair, passando como argumentos quaisquer dois números. Mostrar os resultados no console.
 
 alert(`
 ${num1} + ${num2} = ${somar(num1, num2)}
@@ -15,6 +14,10 @@ ${num1} - ${num2} = ${subtrair(num1, num2)}
 ${num1} * ${num2} = ${multiplicar(num1, num2)}
 ${num1} / ${num2} = ${dividir(num1, num2)}
 `)
+
+// 2. Executar a função que permite adicionar e a função que permite subtrair, passando como argumentos quaisquer dois números. Mostrar os resultados no console.
+console.log(`${num1} + ${num2} = ${somar(num1, num2)}`);
+console.log(`${num1} - ${num2} = ${subtrair(num1, num2)}`);
 
 // 3. Executar a função que permite a multiplicação, passando como argumentos quaisquer dois números. Mostrar o resultado no console.
 // 4. Executar a função que permite multiplicar, passando agora como um dos dois argumentos, o número zero. Mostrar o resultado no console.
