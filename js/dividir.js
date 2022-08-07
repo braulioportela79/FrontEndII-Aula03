@@ -8,10 +8,15 @@ var resultado = document.querySelector('#resultado');
 const dividir = (num1, num2) => {
     num1 = parseInt(n1.value);
     num2 = parseInt(n2.value);
-    if (num1 == 0 | num2 == 0) { 
+    if (num1 == 0 | num2 == 0) {
         document.querySelector('#numeros').innerText = '';
-        return resultado.innerHTML = 'Não se pode dividir por zero.' };
+        return resultado.innerHTML = 'Não se pode dividir por zero.'
+    };
     document.querySelector('#numeros').innerText = n1.value + ' ÷ ' + n2.value + ' = ';
+    if (n1.value == '' || n2.value == '') {
+        document.querySelector('#numeros').innerText = 'Valor Inválido! Digite um número.';
+        return resultado.innerHTML = '';
+    };
     return resultado.innerHTML = num1 / num2;
 };
 

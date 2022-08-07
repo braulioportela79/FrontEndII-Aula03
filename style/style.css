@@ -52,6 +52,7 @@ header > img {
   position: relative;
 }
 .numeros input{
+  margin-top: 50px;
   width: 150px;
   height: 150px;
   font-size: 4rem;

@@ -8,6 +8,10 @@ const subtrair = (num1, num2) => {
     num1 = parseInt(n1.value);
     num2 = parseInt(n2.value);
     document.querySelector('#numeros').innerText = n1.value + ' - ' + n2.value + ' = ';
+    if (n1.value == '' || n2.value == '') {
+        document.querySelector('#numeros').innerText = 'Valor Inválido! Digite um número.';
+        return resultado.innerHTML = '';
+    };
     return resultado.innerHTML = num1 - num2;
 };
 
