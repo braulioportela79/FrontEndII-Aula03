@@ -12,7 +12,7 @@ const multiplicar = (num1, num2) => {
     ${num1} * ${num2} = ${multiplicar(num1, num2)}
     
     Deseja fazer uma nova operação matemática?
-    `)
+    `);
     if (resultado) {
         document.location.reload(true);
     }
