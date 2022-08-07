@@ -11,71 +11,16 @@ let calculadora = prompt(`Escolha uma operação matemática:
 3 - Multiplicar
 4 - Dividir
 `);
-let num1 = 0;
-let num2 = 0;
-let str = '';
 
 if (calculadora == 1) {
-    num1 = parseInt(prompt(`Operação de Soma:
-    
-    Digite primeiro número: `, 0));
-    num2 = parseInt(prompt(`Operação de Soma:
-    
-    Digite segundo número: `, 0));
-    let resultado = confirm(`Resultado:
-    ${num1} + ${num2} = ${somar(num1, num2)}
-
-    Deseja fazer uma nova operação matemática?
-    `)
-    if (resultado) {
-        document.location.reload(true);
-    }
+    somar();
 } else if (calculadora == 2) {
-    num1 = parseInt(prompt(`Operação de Subtração:
-    
-    Digite primeiro número: `, 0));
-    num2 = parseInt(prompt(`Operação de Subtração:
-    
-    Digite segundo número: `, 0));
-    let resultado = confirm(`Resultado:
-    ${num1} - ${num2} = ${subtrair(num1, num2)}
-    
-    Deseja fazer uma nova operação matemática?
-    `)
-    if (resultado) {
-        document.location.reload(true);
-    }
+    subtrair();
 } else if (calculadora == 3) {
-    num1 = parseInt(prompt(`Operação de Multiplicação:
-    
-    Digite primeiro número: `, 0));
-    num2 = parseInt(prompt(`Operação de Multiplicação:
-    
-    Digite segundo número: `, 0));
-    let resultado = confirm(`Resultado:
-    ${num1} * ${num2} = ${multiplicar(num1, num2)}
-    
-    Deseja fazer uma nova operação matemática?
-    `)
-    if (resultado) {
-        document.location.reload(true);
-    }
+    multiplicar();
 } else if (calculadora == 4) {
-    num1 = parseInt(prompt(`Operação de Divisão:
-    
-    Digite primeiro número: `, 0));
-    num2 = parseInt(prompt(`Operação de Divisão:
-    
-    Digite segundo número: `, 0));
-    let resultado = confirm(`Resultado:
-    ${num1} / ${num2} = ${dividir(num1, num2)}
-    
-    Deseja fazer uma nova operação matemática?
-    `)
-    if (resultado) {
-        document.location.reload(true);
-    }
-} else if (calculadora > 4 | calculadora < 0 | typeof calculadora == typeof str ) {
+    dividir();
+} else if (calculadora > 4 | calculadora < 0 | typeof calculadora !== Number) {
     alert(`Opção inválida. Escolha um número entre 1 e 4.`);
     document.location.reload(true);
 };
@@ -83,7 +28,6 @@ if (calculadora == 1) {
 // 2. Executar a função que permite adicionar e a função que permite subtrair, passando como argumentos quaisquer dois números. Mostrar os resultados no console.
 console.log(`${num1} + ${num2} = ${somar(num1, num2)}`);
 console.log(`${num1} - ${num2} = ${subtrair(num1, num2)}`);
-
 
 // 3. Executar a função que permite a multiplicação, passando como argumentos quaisquer dois números. Mostrar o resultado no console.
 // 4. Executar a função que permite multiplicar, passando agora como um dos dois argumentos, o número zero. Mostrar o resultado no console.
