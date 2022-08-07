@@ -4,9 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
     <title>Front End II - Aula 03</title>
   </head>
   <body>
+    <header>
+      <img src="./image/CTD.jpg" alt="CTD" />
+      <h1>Calculadora</h1>
+      <img src="./image/dh.png" alt="DH" />
+    </header>
+
+
+    <div class="numeros">
+      <input id="n1" type="number" placeholder="0" />
+      <input id="n2" type="number" placeholder="0" />
+    </div>
+    <div class="operacao">
+      <span id="numeros"></span><span id="resultado"></span>
+    </div>
+    <div class="choices">
+      <div class="choice">
+        <img src="./image/somar.png" alt="Somar" id="somar" />
+      </div>
+      <div class="choice">
+        <img src="./image/subtrair.png" alt="Subtrair" id="subtrair" />
+      </div>
+      <div class="choice">
+        <img src="./image/multiplicar.png" alt="Multiplicar" id="multiplicar"/>
+      </div>
+      <div class="choice">
+        <img src="./image/dividir.png" alt="Dividir" id="dividir" />
+      </div>
+    </div>
     <script src="./js/calculadora.js" type="module"></script>
+  </body>
+  
   </body>
 </html>
