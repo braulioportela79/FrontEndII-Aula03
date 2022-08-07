@@ -4,18 +4,52 @@ import subtrair from './subtrair.js';
 import multiplicar from './multiplicar.js';
 import dividir from './dividir.js';
 
-let calculadora = prompt('Escolha uma operação matemática: 1 - Somar, 2 - Subtrair, 3 - Multiplicar, 4 - Dividir');
-let num1 = parseInt(prompt('Digite um número:'));
-let num2 = parseInt(prompt('Digite um número:'));
+let calculadora = prompt(`Escolha uma operação matemática:
+
+1 - Somar
+2 - Subtrair
+3 - Multiplicar
+4 - Dividir
+`);
+let num1 = 0;
+let num2 = 0;
 
 if (calculadora == 1) {
-    alert(`${num1} + ${num2} = ${somar(num1, num2)}`)
+    num1 = parseInt(prompt(`Operação de Soma:
+    
+    Digite primeiro número: `));
+    num2 = parseInt(prompt(`Operação de Soma:
+    
+    Digite segundo número: `));
+    alert(`Resultado:
+    ${num1} + ${num2} = ${somar(num1, num2)}`)
 } else if (calculadora == 2) {
-    alert(`${num1} - ${num2} = ${subtrair(num1, num2)}`)
+    num1 = parseInt(prompt(`Operação de Subtração:
+    
+    Digite primeiro número: `));
+    num2 = parseInt(prompt(`Operação de Subtração:
+    
+    Digite segundo número: `));
+    alert(`Resultado:
+    ${num1} - ${num2} = ${subtrair(num1, num2)}`);
 } else if (calculadora == 3) {
-    alert(`${num1} * ${num2} = ${multiplicar(num1, num2)}`)
+    num1 = parseInt(prompt(`Operação de Multiplicação:
+    
+    Digite primeiro número: `));
+    num2 = parseInt(prompt(`Operação de Multiplicação:
+    
+    Digite segundo número: `));
+    alert(`Resultado:
+    ${num1} * ${num2} = ${multiplicar(num1, num2)}`);
 } else if (calculadora == 4) {
-    alert(`${num1} / ${num2} = ${dividir(num1, num2)}`);
+    num1 = parseInt(prompt(`Operação de Divisão:
+    
+    Digite primeiro número: `));
+    num2 = parseInt(prompt(`Operação de Divisão:
+    
+    Digite segundo número: `));
+    alert(`Resultado:
+    ${num1} / ${num2} = ${dividir(num1, num2)}`);
 } else {
     alert(`Opção inválida. Escolha um número entre 1 e 4.`);
 };
