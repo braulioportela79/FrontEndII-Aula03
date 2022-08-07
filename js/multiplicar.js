@@ -2,20 +2,20 @@
 // a. Contemplar o cenário onde se um dos dois parâmetros for zero, a função retornará zero.
 
 const multiplicar = (num1, num2) => {
-    num1 = parseInt(prompt(`Operação de Multiplicação:
+    // num1 = parseInt(prompt(`Operação de Multiplicação:
     
-    Digite primeiro número: `, 0));
-    num2 = parseInt(prompt(`Operação de Multiplicação:
+    // Digite primeiro número: `, 0));
+    // num2 = parseInt(prompt(`Operação de Multiplicação:
     
-    Digite segundo número: `, 0));
-    let resultado = confirm(`Resultado:
-    ${num1} * ${num2} = ${multiplicar(num1, num2)}
+    // Digite segundo número: `, 0));
+    // let resultado = confirm(`Resultado:
+    // ${num1} * ${num2} = ${multiplicar(num1, num2)}
     
-    Deseja fazer uma nova operação matemática?
-    `);
-    if (resultado) {
-        document.location.reload(true);
-    }
+    // Deseja fazer uma nova operação matemática?
+    // `);
+    // if (resultado) {
+    //     document.location.reload(true);
+    // }
     return num1 * num2;
 };
 

@@ -4,6 +4,11 @@ import subtrair from './subtrair.js';
 import multiplicar from './multiplicar.js';
 import dividir from './dividir.js';
 
+let num1 = 0;
+let num2 = 0;
+let operacao = '';
+let simbolo = '';
+let funcao = '';
 let calculadora = prompt(`Escolha uma operação matemática:
 
 1 - Somar
@@ -12,14 +17,51 @@ let calculadora = prompt(`Escolha uma operação matemática:
 4 - Dividir
 `);
 
+let digitarNum = operacao => {
+    num1 = parseInt(prompt(`Operação de ${operacao}:
+    Digite o primeiro número:`, 0
+    ));
+    num2 = parseInt(prompt(`Operação de ${operacao}:
+    Digite o segundo número:`, 0
+    ));
+    return num1 & num2;
+};
+
+let resultado = (simbolo, funcao) => {
+    if (resultado) {
+        document.location.reload(true);
+    };
+    return resultado = confirm(`Resultado:
+${num1} ${simbolo} ${num2} = ${funcao}
+
+Deseja fazer uma nova operação matemática?
+`);
+};
+
 if (calculadora == 1) {
-    somar();
+    operacao = 'Soma';
+    simbolo = '+';
+    digitarNum(operacao)
+    funcao = somar(num1, num2);
+    resultado(simbolo, funcao);
 } else if (calculadora == 2) {
-    subtrair();
+    operacao = 'Subtrair';
+    simbolo = '-';
+    digitarNum(operacao)
+    funcao = subtrair(num1, num2);
+    resultado(simbolo, funcao);
 } else if (calculadora == 3) {
-    multiplicar();
+    operacao = 'Multiplicar';
+    simbolo = '*';
+    digitarNum(operacao)
+    funcao = multiplicar(num1, num2);
+    resultado(simbolo, funcao);
 } else if (calculadora == 4) {
-    dividir();
+    operacao = 'Dividir';
+    simbolo = '/';
+    digitarNum(operacao)
+    funcao = dividir(num1, num2);
+    resultado(simbolo, funcao);
 } else if (calculadora > 4 | calculadora < 0 | typeof calculadora !== Number) {
     alert(`Opção inválida. Escolha um número entre 1 e 4.`);
     document.location.reload(true);
