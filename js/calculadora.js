@@ -74,7 +74,7 @@ if (calculadora == 1) {
     if (resultado) {
         document.location.reload(true);
     }
-} else {
+} else if (calculadora > 4) {
     alert(`Opção inválida. Escolha um número entre 1 e 4.`);
     document.location.reload(true);
 };
