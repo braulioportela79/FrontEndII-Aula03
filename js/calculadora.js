@@ -2,18 +2,23 @@
 import somar from './somar.js';
 import subtrair from './subtrair.js';
 import multiplicar from './multiplicar.js';
-import dividir from './dividir.js'
+import dividir from './dividir.js';
 
+let calculadora = prompt('Escolha uma operação matemática: 1 - Somar, 2 - Subtrair, 3 - Multiplicar, 4 - Dividir');
 let num1 = parseInt(prompt('Digite um número:'));
 let num2 = parseInt(prompt('Digite um número:'));
 
-
-alert(`
-${num1} + ${num2} = ${somar(num1, num2)}
-${num1} - ${num2} = ${subtrair(num1, num2)}
-${num1} * ${num2} = ${multiplicar(num1, num2)}
-${num1} / ${num2} = ${dividir(num1, num2)}
-`)
+if (calculadora == 1) {
+    alert(`${num1} + ${num2} = ${somar(num1, num2)}`)
+} else if (calculadora == 2) {
+    alert(`${num1} - ${num2} = ${subtrair(num1, num2)}`)
+} else if (calculadora == 3) {
+    alert(`${num1} * ${num2} = ${multiplicar(num1, num2)}`)
+} else if (calculadora == 4) {
+    alert(`${num1} / ${num2} = ${dividir(num1, num2)}`);
+} else {
+    alert(`Opção inválida. Escolha um número entre 1 e 4.`);
+};
 
 // 2. Executar a função que permite adicionar e a função que permite subtrair, passando como argumentos quaisquer dois números. Mostrar os resultados no console.
 console.log(`${num1} + ${num2} = ${somar(num1, num2)}`);
