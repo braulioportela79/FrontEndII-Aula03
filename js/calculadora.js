@@ -76,6 +76,7 @@ if (calculadora == 1) {
     }
 } else {
     alert(`Opção inválida. Escolha um número entre 1 e 4.`);
+    document.location.reload(true);
 };
 
 // 2. Executar a função que permite adicionar e a função que permite subtrair, passando como argumentos quaisquer dois números. Mostrar os resultados no console.
