@@ -8,7 +8,9 @@ var resultado = document.querySelector('#resultado');
 const dividir = (num1, num2) => {
     num1 = parseInt(n1.value);
     num2 = parseInt(n2.value);
-    if (num1 == 0 | num2 == 0) { return resultado.innerHTML = 'Não se pode dividir por zero.' };
+    if (num1 == 0 | num2 == 0) { 
+        document.querySelector('#numeros').innerText = '';
+        return resultado.innerHTML = 'Não se pode dividir por zero.' };
     document.querySelector('#numeros').innerText = n1.value + ' ÷ ' + n2.value + ' = ';
     return resultado.innerHTML = num1 / num2;
 };
