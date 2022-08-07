@@ -5,7 +5,6 @@ var n2 = document.querySelector('#n2');
 var resultado = document.querySelector('#resultado');
 
 const somar = (num1, num2) => {
-
     num1 = parseInt(n1.value);
     num2 = parseInt(n2.value);
     document.querySelector('#numeros').innerText = n1.value + ' + ' + n2.value + ' = ';
