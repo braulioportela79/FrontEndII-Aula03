@@ -13,6 +13,7 @@ let calculadora = prompt(`Escolha uma operação matemática:
 `);
 let num1 = 0;
 let num2 = 0;
+let str = '';
 
 if (calculadora == 1) {
     num1 = parseInt(prompt(`Operação de Soma:
@@ -74,7 +75,7 @@ if (calculadora == 1) {
     if (resultado) {
         document.location.reload(true);
     }
-} else if (calculadora > 4 | calculadora < 0) {
+} else if (calculadora > 4 | calculadora < 0 | typeof calculadora == typeof str ) {
     alert(`Opção inválida. Escolha um número entre 1 e 4.`);
     document.location.reload(true);
 };
@@ -82,6 +83,7 @@ if (calculadora == 1) {
 // 2. Executar a função que permite adicionar e a função que permite subtrair, passando como argumentos quaisquer dois números. Mostrar os resultados no console.
 console.log(`${num1} + ${num2} = ${somar(num1, num2)}`);
 console.log(`${num1} - ${num2} = ${subtrair(num1, num2)}`);
+
 
 // 3. Executar a função que permite a multiplicação, passando como argumentos quaisquer dois números. Mostrar o resultado no console.
 // 4. Executar a função que permite multiplicar, passando agora como um dos dois argumentos, o número zero. Mostrar o resultado no console.
