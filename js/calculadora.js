@@ -17,10 +17,10 @@ let num2 = 0;
 if (calculadora == 1) {
     num1 = parseInt(prompt(`Operação de Soma:
     
-    Digite primeiro número: `));
+    Digite primeiro número: `, 0));
     num2 = parseInt(prompt(`Operação de Soma:
     
-    Digite segundo número: `));
+    Digite segundo número: `, 0));
     let resultado = confirm(`Resultado:
     ${num1} + ${num2} = ${somar(num1, num2)}
 
@@ -32,10 +32,10 @@ if (calculadora == 1) {
 } else if (calculadora == 2) {
     num1 = parseInt(prompt(`Operação de Subtração:
     
-    Digite primeiro número: `));
+    Digite primeiro número: `, 0));
     num2 = parseInt(prompt(`Operação de Subtração:
     
-    Digite segundo número: `));
+    Digite segundo número: `, 0));
     let resultado = confirm(`Resultado:
     ${num1} - ${num2} = ${subtrair(num1, num2)}
     
@@ -47,10 +47,10 @@ if (calculadora == 1) {
 } else if (calculadora == 3) {
     num1 = parseInt(prompt(`Operação de Multiplicação:
     
-    Digite primeiro número: `));
+    Digite primeiro número: `, 0));
     num2 = parseInt(prompt(`Operação de Multiplicação:
     
-    Digite segundo número: `));
+    Digite segundo número: `, 0));
     let resultado = confirm(`Resultado:
     ${num1} * ${num2} = ${multiplicar(num1, num2)}
     
@@ -62,10 +62,10 @@ if (calculadora == 1) {
 } else if (calculadora == 4) {
     num1 = parseInt(prompt(`Operação de Divisão:
     
-    Digite primeiro número: `));
+    Digite primeiro número: `, 0));
     num2 = parseInt(prompt(`Operação de Divisão:
     
-    Digite segundo número: `));
+    Digite segundo número: `, 0));
     let resultado = confirm(`Resultado:
     ${num1} / ${num2} = ${dividir(num1, num2)}
     
@@ -74,7 +74,7 @@ if (calculadora == 1) {
     if (resultado) {
         document.location.reload(true);
     }
-} else if (calculadora > 4) {
+} else if (calculadora > 4 | calculadora < 0) {
     alert(`Opção inválida. Escolha um número entre 1 e 4.`);
     document.location.reload(true);
 };
