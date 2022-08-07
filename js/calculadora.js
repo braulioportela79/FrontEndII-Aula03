@@ -21,8 +21,14 @@ if (calculadora == 1) {
     num2 = parseInt(prompt(`Operação de Soma:
     
     Digite segundo número: `));
-    alert(`Resultado:
-    ${num1} + ${num2} = ${somar(num1, num2)}`)
+    let resultado = confirm(`Resultado:
+    ${num1} + ${num2} = ${somar(num1, num2)}
+
+    Deseja fazer uma nova operação matemática?
+    `)
+    if (resultado) {
+        document.location.reload(true);
+    }
 } else if (calculadora == 2) {
     num1 = parseInt(prompt(`Operação de Subtração:
     
@@ -30,8 +36,14 @@ if (calculadora == 1) {
     num2 = parseInt(prompt(`Operação de Subtração:
     
     Digite segundo número: `));
-    alert(`Resultado:
-    ${num1} - ${num2} = ${subtrair(num1, num2)}`);
+    let resultado = confirm(`Resultado:
+    ${num1} - ${num2} = ${subtrair(num1, num2)}
+    
+    Deseja fazer uma nova operação matemática?
+    `)
+    if (resultado) {
+        document.location.reload(true);
+    }
 } else if (calculadora == 3) {
     num1 = parseInt(prompt(`Operação de Multiplicação:
     
@@ -39,8 +51,14 @@ if (calculadora == 1) {
     num2 = parseInt(prompt(`Operação de Multiplicação:
     
     Digite segundo número: `));
-    alert(`Resultado:
-    ${num1} * ${num2} = ${multiplicar(num1, num2)}`);
+    let resultado = confirm(`Resultado:
+    ${num1} * ${num2} = ${multiplicar(num1, num2)}
+    
+    Deseja fazer uma nova operação matemática?
+    `)
+    if (resultado) {
+        document.location.reload(true);
+    }
 } else if (calculadora == 4) {
     num1 = parseInt(prompt(`Operação de Divisão:
     
@@ -48,8 +66,14 @@ if (calculadora == 1) {
     num2 = parseInt(prompt(`Operação de Divisão:
     
     Digite segundo número: `));
-    alert(`Resultado:
-    ${num1} / ${num2} = ${dividir(num1, num2)}`);
+    let resultado = confirm(`Resultado:
+    ${num1} / ${num2} = ${dividir(num1, num2)}
+    
+    Deseja fazer uma nova operação matemática?
+    `)
+    if (resultado) {
+        document.location.reload(true);
+    }
 } else {
     alert(`Opção inválida. Escolha um número entre 1 e 4.`);
 };
